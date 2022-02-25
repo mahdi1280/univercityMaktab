@@ -95,22 +95,34 @@ public class University {
     }
 
     public void showTermCourse(User student) {
-        for(User user:this.users){
+//        for(User user:this.users){
+//            if(user.equals(student))
+//                user.getCourses().forEach(System.out::println);
+//        }
+        users.forEach((user)->{
             if(user.equals(student))
                 user.getCourses().forEach(System.out::println);
-        }
+        });
     }
 
     public void addNomre(int score,int id){
-        for (TermCourse termCourse :this.termCourses) {
+//        for (TermCourse termCourse :this.termCourses) {
+//            if(termCourse.getId()==id)
+//                termCourse.setScore(score);
+//        }
+        termCourses.forEach((termCourse)->{
             if(termCourse.getId()==id)
                 termCourse.setScore(score);
-        }
+        });
     }
     public void shwFactor(User user){
-        for(Factor factor:this.factors){
+//        for(Factor factor:this.factors){
+//            if(factor.getUser().equals(user))
+//                System.out.println(factor.toString());
+//        }
+        factors.forEach((factor)->{
             if(factor.getUser().equals(user))
-                System.out.println(factor.toString());
-        }
+                System.out.println(factor);
+        });
     }
 }
